@@ -1,0 +1,8 @@
+{
+  "description": {
+    "message": "Getting api from ShowDoc doc in MD format."
+  },
+  "whetherToOpen": {
+    "message": "whether to open"
+  }
+}

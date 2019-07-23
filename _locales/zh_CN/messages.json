@@ -1,0 +1,8 @@
+{
+  "description": {
+    "message": "解析 ShowDoc 的 MD 文档获取API。"
+  },
+  "whetherToOpen": {
+    "message": "是否开启"
+  }
+}

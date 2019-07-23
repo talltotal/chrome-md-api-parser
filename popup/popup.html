@@ -1,0 +1,95 @@
+﻿<!doctype html>
+<html>
+  <head>
+    <title>DCY</title>
+    <style>
+      body {
+        font-family: sans-serif;
+        min-width: 380px;
+        font-size: 14px;
+        margin: 15px;
+      }
+      .input {
+        -webkit-appearance: none;
+        border-radius: 4px;
+        border: 1px solid #dcdfe6;
+        box-sizing: border-box;
+        color: #606266;
+        display: inline-block;
+        font-size: inherit;
+        height: 40px;
+        line-height: 40px;
+        outline: none;
+        padding: 0 15px;
+        transition: border-color .2s cubic-bezier(.645,.045,.355,1);
+        width: 100%;
+      }
+      textarea {
+        display: block;
+        padding: 5px 15px;
+        line-height: 1.5;
+        box-sizing: border-box;
+        width: 100%;
+        font-size: inherit;
+        color: #606266;
+        border: 1px solid #dcdfe6;
+        border-radius: 4px;
+        transition: border-color .2s cubic-bezier(.645,.045,.355,1);
+      }
+      .input:focus,
+      textarea:focus {
+        outline: none;
+        border-color: #409eff;
+      }
+      .input + .input {
+        margin-top: 5px;
+      }
+      .tip {
+        color: #999;
+      }
+      button {
+        width: 100%;
+        line-height: 1;
+        white-space: nowrap;
+        cursor: pointer;
+        background: #409eff;
+        border: 1px solid #409eff;
+        color: #fff;
+        -webkit-appearance: none;
+        text-align: center;
+        box-sizing: border-box;
+        outline: none;
+        margin: 0;
+        transition: .1s;
+        font-weight: 500;
+        -moz-user-select: none;
+        -webkit-user-select: none;
+        -ms-user-select: none;
+        padding: 12px 20px;
+        font-size: 14px;
+        border-radius: 4px;
+        margin-top: 15px;
+      }
+      label {
+        display: block;
+        margin-bottom: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>MD -> MOCK API</h2>
+    <!-- <h4></h4> -->
+    <form id="form">
+      <label class="tip">导出:</label>
+      <label>
+        <input type="radio" name="type" value="0" checked />当前页面
+      </label>
+      <label>
+        <input type="radio" name="type" value="1" />菜单某节点下所有
+      </label>
+      <input style="display: none;" id="menuPath" class="input" type="text" placeholder="请输入菜单路径，用‘,’分隔" />
+      <button type="submit">导出</button>
+    </form>
+    <script src="./popup.js"></script>
+  </body>
+</html>
