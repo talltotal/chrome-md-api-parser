@@ -8,3 +8,8 @@
 3. 保存文件
     - 文件系统受限
     - url + 下载权限
+
+## road
+- 更多配置 定义到 options 内
+- package
+- new logo
