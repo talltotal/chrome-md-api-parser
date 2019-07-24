@@ -2,7 +2,7 @@ const trans = (function () {
     function parsePage (content, title, apiPrefix = '') {
         const apiList = []
         const apis = []
-        const regExp = /\/[a-zA-Z]+\/[a-zA-Z\/]+/g
+        const regExp = /\/[a-zA-Z0-9]+\/[a-zA-Z0-9\/]+/g
         const commitReg = /[\s\S]*\n?\s*#+ (\S+)/
         const resReg = /返回\S*\s*\n```.*((\n(?!```).*)+)/
         let result
@@ -74,14 +74,14 @@ const trans = (function () {
                 })
             },
             loadApis: async function loadApis (ids) {
-                let apiTxt = ''
+                let apiTxt = []
                 for (let id of ids) {
                     const { page_content, page_title } = await getPageInfo(id)
                     const [apis] = parsePage(page_content, page_title, apiPrefix)
-                    apiTxt += apis.join(',') + ','
+                    apiTxt = apiTxt.concat(apis)
                 }
 
-                return apiTxt
+                return apiTxt.join(',')
             }
         }
     }
