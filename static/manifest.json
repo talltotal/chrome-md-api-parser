@@ -17,14 +17,14 @@
             "48": "images/css48.png",
             "128": "images/css128.png"
         },
-        "default_popup": "popup/popup.html",
+        "default_popup": "popup.html",
         "default_title": "MD -> MOCK API"
     },
     "background": {
         "scripts": ["bg.js"],
         "persistent": false
     },
-    "options_page": "options/options.html",
+    "options_page": "options.html",
     "permissions": [
         "tabs",
         "downloads",
