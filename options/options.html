@@ -1,0 +1,146 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <title>DocApiParser</title>
+    <style>
+      body {
+        max-width: 940px;
+        margin: 30px auto;
+        padding: 0 30px;
+        font-family: sans-serif;
+        font-size: 14px;
+      }
+      h1 {
+        text-align: center;
+        margin: 40px;
+      }
+      ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+      li {
+        position: relative;
+        border-radius: 4px;
+        border: 1px solid #ebeef5;
+        background-color: #fff;
+        overflow: hidden;
+        color: #303133;
+        box-shadow: 0 2px 12px 0 rgba(0,0,0,.1);
+      }
+      .item-url {
+        padding: 18px 20px;
+        border: none;
+        border-bottom: 1px solid #ebeef5;
+        box-sizing: border-box;
+        display: block;
+        -webkit-appearance: none;
+        font-size: inherit;
+        outline: none;
+        /* transition: border-color .2s cubic-bezier(.645,.045,.355,1); */
+        width: 100%;
+      }
+      .item-css {
+        padding: 20px;
+        display: block;
+        line-height: 1.5;
+        box-sizing: border-box;
+        width: 100%;
+        font-size: inherit;
+        border: none;
+        max-width: 100%;
+        min-width: 100%;
+        border-bottom: 1px solid transparent;
+      }
+      input:focus,
+      textarea:focus {
+        outline: none;
+        border-color: #409eff;
+      }
+      li + li {
+        margin-top: 20px;
+      }
+      .item-control {
+        position: absolute;
+        right: 20px;
+        top: 16px;
+        display: flex;
+        align-items: center;
+      }
+      .item-open {
+        position: relative;
+        cursor: pointer;
+        width: 40px;
+        height: 20px;
+        border-color: rgb(19, 206, 102);
+        background-color: rgb(19, 206, 102);
+        margin: 0;
+        display: inline-block;
+        border-radius: 10px;
+        transition: border-color .3s,background-color .3s;
+      }
+      .item-del {
+        cursor: pointer;
+        color: rgb(255, 73, 73);
+        margin-left: 20px;
+      }
+      .item-open::after {
+        content: "";
+        position: absolute;
+        top: 2px;
+        border-radius: 100%;
+        transition: all .3s;
+        width: 16px;
+        height: 16px;
+        background-color: #fff;
+        left: 100%;
+        margin-left: -18px;
+      }
+      .item-open.open-false {
+        border-color: rgb(255, 73, 73);
+        background-color: rgb(255, 73, 73);
+      }
+      .item-open.open-false::after {
+        left: 2px;
+        margin-left: 0;
+      }
+      button {
+        width: 100%;
+        line-height: 1;
+        white-space: nowrap;
+        cursor: pointer;
+        background: #409eff;
+        border: 1px solid #409eff;
+        color: #fff;
+        -webkit-appearance: none;
+        text-align: center;
+        box-sizing: border-box;
+        outline: none;
+        margin: 0;
+        transition: .1s;
+        font-weight: 500;
+        -moz-user-select: none;
+        -webkit-user-select: none;
+        -ms-user-select: none;
+        padding: 12px 20px;
+        font-size: 14px;
+        border-radius: 4px;
+        margin-top: 30px;
+      }
+      .tip {
+        color: #999;
+      }
+      .add-item {
+        cursor: pointer;
+        text-align: center;
+        padding: 10px;
+        font-size: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>MD -> MOCK API</h1>
+    <div id="content"></div>
+  </body>
+  <script src="options.js"></script>
+</html>

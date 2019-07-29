@@ -24,6 +24,7 @@
         "scripts": ["bg.js"],
         "persistent": false
     },
+    "options_page": "options/options.html",
     "permissions": [
         "tabs",
         "downloads",
