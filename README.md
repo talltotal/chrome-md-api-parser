@@ -11,5 +11,3 @@
 
 ## road
 - 更多配置 定义到 options 内
-- package
-- new logo

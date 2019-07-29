@@ -36,7 +36,7 @@ const bg = {
       {
         from: path.resolve(__dirname, './static'),
         to: './',
-        ignore: ['.*']
+        ignore: ['.*','*.psd']
       },
     ]),
   ],
