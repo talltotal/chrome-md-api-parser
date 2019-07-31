@@ -13,6 +13,8 @@ chrome.tabs.onSelectionChanged.addListener((tabId) => {
   chrome.tabs.get(tabId, ({ url }) => {
     if (url && url.match(/\/web\/#\/\d+\?page_id=\d+/)) {
       chrome.pageAction.show(tabId)
+    } else {
+      chrome.pageAction.hide(tabId)
     }
   })
 })

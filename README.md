@@ -11,3 +11,6 @@
 
 ## road
 - 更多配置 定义到 options 内
+- hide 没灰???
+- local 覆盖
+- json 解析错误提示
